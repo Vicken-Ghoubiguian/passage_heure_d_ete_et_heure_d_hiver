@@ -887,164 +887,182 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Los Angeles"...
 	else if(strcmp(nom_de_la_ville,"Los Angeles") == 0)
 	{
-		//
+		//Calcul de l'heure et de la date à Los Angeles et stockage de celui-ci dans la variable heure_los_angeles
+		//Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_los_angeles = temps_heure_de_paris - (décallage_entre_paris_et_los_angeles_en_temps_reel * 3600)
 		time_t heure_los_angeles = temps_courant - ((9 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Los Angeles en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_los_angeles, "Los Angeles");
 	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "New York City"...
 	else if(strcmp(nom_de_la_ville,"New York City") == 0)
 	{
-		//
+		//Calcul de l'heure et de la date à New York et stockage de celui-ci dans la variable heure_de_nyc
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_new_york_city = temps_heure_de_paris - (décallage_entre_paris_et_new_york_city_en_temps_reel * 3600)
 		time_t heure_de_nyc = temps_courant - ((6 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de New York City en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_de_nyc, "New York City");
 	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Ottawa"...
 	else if(strcmp(nom_de_la_ville,"Ottawa") == 0)
 	{
-		//
+		//Calcul de l'heure et de la date à Ottawa et stockage de celui-ci dans la variable heure_d_ottawa
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_ottawa = temps_heure_de_paris - (décallage_entre_paris_et_ottawa_en_temps_reel * 3600)
 		time_t heure_d_ottawa = temps_courant - ((6 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Ottawa en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_d_ottawa, "Ottawa");
 	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Phoenix"...
 	else if(strcmp(nom_de_la_ville,"Phoenix") == 0)
 	{
-		//
+		//Calcul de l'heure et de la date à Phoenix et stockage de celui-ci dans la variable heure_de_phoenix
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_phoenix = temps_heure_de_paris - (décallage_entre_paris_et_phoenix_en_temps_reel * 3600)
 		time_t heure_de_phoenix = temps_courant - ((9 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Phoenix en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_de_phoenix, "Phoenix");
 	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Londres"...
 	else if(strcmp(nom_de_la_ville,"Londres") == 0)
         {
-		//
+		//Calcul de l'heure et de la date à Londres et stockage de celui-ci dans la variable heure_de_londres
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_londres = temps_heure_de_paris - (décallage_entre_paris_et_londres_en_temps_reel * 3600)
 		time_t heure_de_londres = temps_courant - ((1 - calcul_du_decallage_avec_la_grande_bretagne(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Londres en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_de_londres, "Londres");
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Moscou"...
         else if(strcmp(nom_de_la_ville,"Moscou") == 0)
         {
-		//
+		//Calcul de l'heure et de la date à Moscou et stockage de celui-ci dans la variable heure_moscou
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_moscou = temps_heure_de_paris - (décallage_entre_paris_et_moscou_en_temps_reel * 3600)
 		time_t heure_moscou = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Moscou en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_moscou, "Moscou");
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Vladivostok"...
         else if(strcmp(nom_de_la_ville,"Vladivostok") == 0)
         {
-		//
+		//Calcul de l'heure et de la date à Vladivostok et stockage de celui-ci dans la variable heure_vladivostok
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_vladivostok = temps_heure_de_paris - (décallage_entre_paris_et_vladivostok_en_temps_reel * 3600)
 		time_t heure_vladivostok = temps_courant + ((8 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Vladivostok en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_vladivostok, "Vladivostok");
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Wellington"...
 	else if(strcmp(nom_de_la_ville,"Wellington") == 0)
 	{
-		//
+		//Calcul de l'heure et de la date à Wellington et stockage de celui-ci dans la variable heure_wellington
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_wellington = temps_heure_de_paris - (décallage_entre_paris_et_wellington_en_temps_reel * 3600)
 		time_t heure_wellington = temps_courant + ((12 -  calcul_du_decalage_avec_wellington(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Wellington en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_wellington, "Wellington");
 	}
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Canberra"...
         else if(strcmp(nom_de_la_ville,"Canberra") == 0)
         {
-		//
+		//Calcul de l'heure et de la date à Canberra et stockage de celui-ci dans la variable heure_canberra
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_canberra = temps_heure_de_paris - (décallage_entre_paris_et_canberra_en_temps_reel * 3600)
 		time_t heure_canberra = temps_courant + ((10 - calcul_du_decalage_avec_canberra(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Canberra en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_canberra, "Canberra");
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Santiago du Chili"...
         else if(strcmp(nom_de_la_ville,"Santiago du Chili") == 0)
         {
-		//
+		//Calcul de l'heure et de la date à Santiago du Chili et stockage de celui-ci dans la variable heure_santiago_chili
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_santiago_du_chili = temps_heure_de_paris - (décallage_entre_paris_et_santiago_du_chili_en_temps_reel * 3600)
 		time_t heure_santiago_chili = temps_courant - ((6 - calcul_du_decalage_avec_le_chili(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Santiago du Chili en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_santiago_chili, "Santiago du Chili");
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Johannesburg"...
 	else if(strcmp(nom_de_la_ville,"Johannesburg") == 0)
         {
-		//
+		//Calcul de l'heure et de la date à Johannesburg et stockage de celui-ci dans la variable heure_johannesburg
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_johannesburg = temps_heure_de_paris - (décallage_entre_paris_et_johannesburg_en_temps_reel * 3600)
 		time_t heure_johannesburg = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Johannesburg en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_johannesburg, "Johannesburg");
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Buenos Aires"...
         else if(strcmp(nom_de_la_ville,"Buenos Aires") == 0)
         {
-		//
+		//Calcul de l'heure et de la date à Buenos Aires et stockage de celui-ci dans la variable heure_buenos_aires
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_buenos_aires = temps_heure_de_paris - (décallage_entre_paris_et_buenos_aires_en_temps_reel * 3600)
 		time_t heure_buenos_aires = temps_courant - ((5 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Buenos Aires en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_buenos_aires, "Buenos Aires");
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Antananarivo"...
         else if(strcmp(nom_de_la_ville,"Antananarivo") == 0)
         {
-		//
+		//Calcul de l'heure et de la date à Antananarivo et stockage de celui-ci dans la variable heure_antananarivo
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_antananarivo = temps_heure_de_paris - (décallage_entre_paris_et_antananarivo_en_temps_reel * 3600)
 		time_t heure_antananarivo = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Antananarivo en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_antananarivo, "Antananarivo");
 
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Windhoek"...
         else if(strcmp(nom_de_la_ville,"Windhoek") == 0)
         {
-		//
+		//Calcul de l'heure et de la date à Windhoek et stockage de celui-ci dans la variable heure_windhoek
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_windhoek = temps_heure_de_paris - (décallage_entre_paris_et_windhoek_en_temps_reel * 3600)
 		time_t heure_windhoek = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Windhoek en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_windhoek, "Windhoek");
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Lima"...
         else if(strcmp(nom_de_la_ville,"Lima") == 0)
         {
-		//
+		//Calcul de l'heure et de la date à Lima et stockage de celui-ci dans la variable heure_lima
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_lima = temps_heure_de_paris - (décallage_entre_paris_et_lima_en_temps_reel * 3600)
 		time_t heure_lima = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Lima en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_lima, "Lima");
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Seoul"...
         else if(strcmp(nom_de_la_ville,"Seoul") == 0)
         {
-		//
+		//Calcul de l'heure et de la date à Seoul et stockage de celui-ci dans la variable heure_seoul
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_seoul = temps_heure_de_paris - (décallage_entre_paris_et_seoul_en_temps_reel * 3600)
 		time_t heure_seoul = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Seoul en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_seoul, "Seoul");
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Tokyo"...
         else if(strcmp(nom_de_la_ville,"Tokyo") == 0)
         {
-		//
+		//Calcul de l'heure et de la date à Tokyo et stockage de celui-ci dans la variable heure_tokyo
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_tokyo = temps_heure_de_paris - (décallage_entre_paris_et_tokyo_en_temps_reel * 3600)
 		time_t heure_tokyo = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Tokyo en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_tokyo, "Tokyo");
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Pekin"...
 	else if(strcmp(nom_de_la_ville,"Pekin") == 19)
         {
-		//
+		//Calcul de l'heure et de la date à Pekin et stockage de celui-ci dans la variable heure_pekin
+                //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_pekin = temps_heure_de_paris - (décallage_entre_paris_et_pekin_en_temps_reel * 3600)
 		time_t heure_pekin = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
 
-		//
+		//L'heure et la date de Pekin en temps réel est retournée
 		return calcul_et_renvoie_horaire(heure_pekin, "Pekin");
         }
 	//Sinon...

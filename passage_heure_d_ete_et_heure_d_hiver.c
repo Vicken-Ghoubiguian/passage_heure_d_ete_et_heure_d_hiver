@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 #include "passage_heure_d_ete_et_heure_d_hiver.h"
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour les pays européens) à l'aide du timestamp et de l'heure (1 pour la Grande Bretagne et 2 pour la France) passé en paramétre
@@ -688,7 +689,7 @@ int calcul_du_decallage_avec_la_grande_bretagne(time_t aujourdhui)
 	}
 }
 
-//Cette fonction permet de calculer et d'afficher les horaires
+//Cette fonction permet de calculer et d'afficher les horaires d'une ville passée en paramétre
 void calcul_et_affichage_horaire(time_t temps, char* ville)
 {
 	//Declaration des variables
@@ -777,4 +778,279 @@ void affichage_de_l_horloge(time_t temps_courant)
 	calcul_et_affichage_horaire(heure_tokyo, "Tokyo");
 	calcul_et_affichage_horaire(heure_pekin, "Pekin");
 	printf("\n");
+}
+
+//Cette fonction permet de calculer et de renvoyer les horaires d'une ville passée en paramétre
+char* calcul_et_renvoie_horaire(time_t temps, char* ville)
+{
+	//Declaration des variables
+	struct tm *horaire = localtime(&temps);
+	char* jour_semaine;
+	char* mois;
+	char* resultat_du_calcul = malloc(sizeof(char) * 85);
+	char chiffre_a_convertir_en_str[5];
+
+	//Definition du mois en court en fonction du champs tm_mon de la structure tm
+	switch(horaire->tm_mon)
+	{
+		case 0: mois = "Janvier"; break;
+		case 1: mois = "Fevrier"; break;
+		case 2: mois = "Mars"; break;
+		case 3: mois = "Avril"; break;
+		case 4: mois = "Mai"; break;
+		case 5: mois = "Juin"; break;
+		case 6: mois = "Juillet"; break;
+		case 7: mois = "Aout"; break;
+		case 8: mois = "Septembre"; break;
+		case 9: mois = "Octobre"; break;
+		case 10: mois = "Novembre"; break;
+		case 11: mois = "Decembre"; break;
+	}	
+
+	//Definition du jour de la semaine en fonction du champs tm_wday de la structure tm
+	switch(horaire->tm_wday)
+	{
+		case 0: jour_semaine = "Dimanche"; break;
+		case 1: jour_semaine = "Lundi"; break;
+		case 2: jour_semaine = "Mardi"; break;
+		case 3: jour_semaine = "Mercredi"; break;
+		case 4: jour_semaine = "Jeudi"; break;
+		case 5: jour_semaine = "Vendredi"; break;
+		case 6: jour_semaine = "Samedi"; break;
+	}
+
+	//
+	strcat(resultat_du_calcul, ville);
+
+	//
+	strcat(resultat_du_calcul, " : ");
+
+	//
+	sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_hour);
+	strcat(resultat_du_calcul, chiffre_a_convertir_en_str);
+
+	//
+	strcat(resultat_du_calcul, ":");
+
+	//
+	sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_min);
+	strcat(resultat_du_calcul, chiffre_a_convertir_en_str);
+
+	//
+	strcat(resultat_du_calcul, ":");
+
+	//
+	sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_sec);
+	strcat(resultat_du_calcul, chiffre_a_convertir_en_str);
+
+	//
+	strcat(resultat_du_calcul, " - ");
+
+	//
+	strcat(resultat_du_calcul, jour_semaine);
+
+	//
+	strcat(resultat_du_calcul, " ");
+
+	//
+	sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_mday);
+	strcat(resultat_du_calcul, chiffre_a_convertir_en_str);
+
+	//
+	strcat(resultat_du_calcul, " ");
+
+	//
+        strcat(resultat_du_calcul, mois);
+
+	//
+	strcat(resultat_du_calcul, " ");
+
+	//
+	sprintf(chiffre_a_convertir_en_str, "%d", horaire->tm_year + 1900);
+        strcat(resultat_du_calcul, chiffre_a_convertir_en_str);
+
+	//
+	return resultat_du_calcul;
+}
+
+//Cette fonction calcule puis retourne l'heure et la date pour une ville déterminée et connue passée en paramétre sous forme d'une chaine de caractères
+char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t temps_courant, char* nom_de_la_ville)
+{
+
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Perpignan"...
+	if(strcmp(nom_de_la_ville,"Perpignan") == 0)
+	{
+
+		//L'heure et la date de Perpignan en temps réel est retournée
+		return calcul_et_renvoie_horaire(temps_courant, "Perpignan");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Los Angeles"...
+	else if(strcmp(nom_de_la_ville,"Los Angeles") == 0)
+	{
+		//
+		time_t heure_los_angeles = temps_courant - ((9 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_los_angeles, "Los Angeles");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "New York City"...
+	else if(strcmp(nom_de_la_ville,"New York City") == 0)
+	{
+		//
+		time_t heure_de_nyc = temps_courant - ((6 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_de_nyc, "New York City");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Ottawa"...
+	else if(strcmp(nom_de_la_ville,"Ottawa") == 0)
+	{
+		//
+		time_t heure_d_ottawa = temps_courant - ((6 - calcul_du_decalage_avec_l_amerique_du_nord(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_d_ottawa, "Ottawa");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Phoenix"...
+	else if(strcmp(nom_de_la_ville,"Phoenix") == 0)
+	{
+		//
+		time_t heure_de_phoenix = temps_courant - ((9 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_de_phoenix, "Phoenix");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Londres"...
+	else if(strcmp(nom_de_la_ville,"Londres") == 0)
+        {
+		//
+		time_t heure_de_londres = temps_courant - ((1 - calcul_du_decallage_avec_la_grande_bretagne(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_de_londres, "Londres");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Moscou"...
+        else if(strcmp(nom_de_la_ville,"Moscou") == 0)
+        {
+		//
+		time_t heure_moscou = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_moscou, "Moscou");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Vladivostok"...
+        else if(strcmp(nom_de_la_ville,"Vladivostok") == 0)
+        {
+		//
+		time_t heure_vladivostok = temps_courant + ((8 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_vladivostok, "Vladivostok");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Wellington"...
+	else if(strcmp(nom_de_la_ville,"Wellington") == 0)
+	{
+		//
+		time_t heure_wellington = temps_courant + ((12 -  calcul_du_decalage_avec_wellington(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_wellington, "Wellington");
+	}
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Canberra"...
+        else if(strcmp(nom_de_la_ville,"Canberra") == 0)
+        {
+		//
+		time_t heure_canberra = temps_courant + ((10 - calcul_du_decalage_avec_canberra(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_canberra, "Canberra");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Santiago du Chili"...
+        else if(strcmp(nom_de_la_ville,"Santiago du Chili") == 0)
+        {
+		//
+		time_t heure_santiago_chili = temps_courant - ((6 - calcul_du_decalage_avec_le_chili(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_santiago_chili, "Santiago du Chili");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Johannesburg"...
+	else if(strcmp(nom_de_la_ville,"Johannesburg") == 0)
+        {
+		//
+		time_t heure_johannesburg = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_johannesburg, "Johannesburg");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Buenos Aires"...
+        else if(strcmp(nom_de_la_ville,"Buenos Aires") == 0)
+        {
+		//
+		time_t heure_buenos_aires = temps_courant - ((5 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_buenos_aires, "Buenos Aires");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Antananarivo"...
+        else if(strcmp(nom_de_la_ville,"Antananarivo") == 0)
+        {
+		//
+		time_t heure_antananarivo = temps_courant + ((1 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_antananarivo, "Antananarivo");
+
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Windhoek"...
+        else if(strcmp(nom_de_la_ville,"Windhoek") == 0)
+        {
+		//
+		time_t heure_windhoek = temps_courant + ((0 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_windhoek, "Windhoek");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Lima"...
+        else if(strcmp(nom_de_la_ville,"Lima") == 0)
+        {
+		//
+		time_t heure_lima = temps_courant - ((7 - application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_lima, "Lima");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Seoul"...
+        else if(strcmp(nom_de_la_ville,"Seoul") == 0)
+        {
+		//
+		time_t heure_seoul = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_seoul, "Seoul");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Tokyo"...
+        else if(strcmp(nom_de_la_ville,"Tokyo") == 0)
+        {
+		//
+		time_t heure_tokyo = temps_courant + ((7 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_tokyo, "Tokyo");
+        }
+	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Pekin"...
+	else if(strcmp(nom_de_la_ville,"Pekin") == 19)
+        {
+		//
+		time_t heure_pekin = temps_courant + ((6 + application_de_l_heure_d_ete_pour_les_fuseaux_sans_changements(temps_courant)) * 3600);
+
+		//
+		return calcul_et_renvoie_horaire(heure_pekin, "Pekin");
+        }
+	//Sinon...
+	else
+	{
+		//
+		return "Erreur: Le nom de la ville entré en paramétre est inconnue...pour le moment.";
+	}
 }

@@ -48,10 +48,16 @@ int calcul_du_decalage_avec_l_amerique_du_nord(time_t aujourdhui);
 //Cette fonction permet de calculer le decallage horaire de Londres avec l'heure française
 int calcul_du_decallage_avec_la_grande_bretagne(time_t aujourdhui);
 
-//Cette fonction permet de calculer et d'afficher les horaires
+//Cette fonction permet de calculer et d'afficher les horaires d'une ville passée en paramétre
 void calcul_et_affichage_horaire(time_t temps, char* ville);
 
 //Fonction d'affichage de l'horloge
 void affichage_de_l_horloge(time_t temps_courant);
+
+//Cette fonction permet de calculer et de renvoyer les horaires pour une ville spécifiée en paramétre
+char* calcul_et_renvoie_horaire(time_t temps, char* ville);
+
+//Cette fonction calcule puis retourne l'heure et la date pour une ville déterminée et connue passée en paramétre sous forme d'une chaine de caractères
+char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t temps_courant, char* nom_de_la_ville);
 
 #endif

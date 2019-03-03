@@ -1056,7 +1056,7 @@ char* retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time_t
 		return calcul_et_renvoie_horaire(heure_tokyo, "Tokyo");
         }
 	//Si la valeur contenue dans la chaine de caractére nom_de_la_ville est égale à "Pekin"...
-	else if(strcmp(nom_de_la_ville,"Pekin") == 19)
+	else if(strcmp(nom_de_la_ville,"Pekin") == 0)
         {
 		//Calcul de l'heure et de la date à Pekin et stockage de celui-ci dans la variable heure_pekin
                 //Explication simplifiée du calcul: heure_et_date_en_temps_reel_a_pekin = temps_heure_de_paris - (décallage_entre_paris_et_pekin_en_temps_reel * 3600)

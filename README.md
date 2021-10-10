@@ -16,10 +16,11 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
   $ cd passage_heure_d_ete_et_heure_d_hiver
   ```
 
-Pour compiler le fichier main.c et le fichier passage_heure_d_ete_et_heure_d_hiver.c, faire la commande suivante:
-```bash
-$ gcc main.c passage_heure_d_ete_et_heure_d_hiver.c
-```
+3. Il est temps maintenant de compiler le fichier ```main.c``` avec la bibliothéque ```passage_heure_d_ete_et_heure_d_hiver```.
+  Pour ce faire, exécutez la commande suivante:
+  ```bash
+  $ gcc main.c passage_heure_d_ete_et_heure_d_hiver.c
+  ```
 
 Un fichier exécutable a.out est généré, il faut l'éxécuter à l'aide de la commande suivante:
 ```bash

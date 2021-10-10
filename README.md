@@ -2,10 +2,26 @@
 
 Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et à l'heure d'hiver, et du décalage horaire actuel avec la France, pour plusieurs pays et régions du monde à partir de l'heure et de la date courantes de la timezone "Europe/Paris".
 
-Pour compiler le fichier main.c et le fichier passage_heure_d_ete_et_heure_d_hiver.c, faire la commande suivante:
+## Sommaire
 
+## Comment compiler cette bibliothèque ?
+
+1. Tout d'abord, clonez le dépôt Git __passage_heure_d_ete_et_heure_d_hiver__ sur votre ordinateur:
+  ```bash
+  $ git clone https://github.com/Vicken-Ghoubiguian/passage_heure_d_ete_et_heure_d_hiver
+  ```
+
+2. Rendez vous, ensuite, dans le dépôt cloné sous forme de répertoire:
+  ```bash
+  $ cd passage_heure_d_ete_et_heure_d_hiver
+  ```
+
+Pour compiler le fichier main.c et le fichier passage_heure_d_ete_et_heure_d_hiver.c, faire la commande suivante:
+```bash
 $ gcc main.c passage_heure_d_ete_et_heure_d_hiver.c
+```
 
 Un fichier exécutable a.out est généré, il faut l'éxécuter à l'aide de la commande suivante:
-
+```bash
 $ ./a.out
+```

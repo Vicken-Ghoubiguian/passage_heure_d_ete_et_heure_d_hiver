@@ -21,8 +21,10 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
   ```bash
   gcc main.c passage_heure_d_ete_et_heure_d_hiver/*
   ```
-
-Un fichier exécutable a.out est généré, il faut l'éxécuter à l'aide de la commande suivante:
-```bash
-./a.out
-```
+  
+  Un fichier exécutable ```a.out``` est généré, il faut l'éxécuter à l'aide de la commande suivante:
+  ```bash
+  ./a.out
+  ```
+  
+4. Félicitations, maintenant vous pouvez utiliser cette bibliothèque sans problème.

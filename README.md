@@ -4,6 +4,7 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
 
 ## Sommaire
 
+<a name="comment_compiler_cette_bibliotheque"></a>
 ## Comment compiler cette bibliothèque ?
 
 1. Tout d'abord, clonez le dépôt Git __passage_heure_d_ete_et_heure_d_hiver__ sur votre ordinateur:

@@ -4,8 +4,11 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
 
 ## Sommaire
 
-1. [Introduction]()
+1. [Introduction](#introduction)
 2. [Comment compiler cette bibliothèque ?](#comment_compiler_cette_bibliotheque)
+
+<a name="introduction"></a>
+## Introduction
 
 <a name="comment_compiler_cette_bibliotheque"></a>
 ## Comment compiler cette bibliothèque ?

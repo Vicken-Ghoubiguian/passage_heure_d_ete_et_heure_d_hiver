@@ -52,3 +52,18 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
   ```
   
 4. Félicitations, maintenant vous pouvez utiliser cette bibliothèque sans problème.
+
+<a name="comment_installer_cette_bibliotheque"></a>
+## Comment installer cette bibliothèque ?
+
+<a name="comment_l_utiliser"></a>
+## Comment l'utiliser ?
+
+<a name="quelques_exemples"></a>
+## Quelques exemples
+
+<a name="liens_utiles"></a>
+## Liens utiles
+
+<a name="conclusion"></a>
+## Conclusion

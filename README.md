@@ -61,8 +61,8 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
 <a name="comment_installer_cette_bibliotheque"></a>
 ## Comment installer cette bibliothèque ?
 
-<a name="windows"></a>
-### Windows
+<a name="linux"></a>
+### Linux
 
 <a name="mac"></a>
 ### Mac

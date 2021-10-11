@@ -5,10 +5,27 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
 ## Sommaire
 
 1. [Introduction](#introduction)
-2. [Comment compiler cette bibliothèque ?](#comment_compiler_cette_bibliotheque)
+2. [Présentation](#presentation)
+3. [Structure de ce dépôt Git](#structure_de_ce_depot_git)
+4. [Comment ce projet a-t-il été développé ?](#comment_ce_projet_a_t_il_ete_developpe)
+5. [Comment compiler cette bibliothèque ?](#comment_compiler_cette_bibliotheque)
+6. [Comment installer cette bibliothèque ?](#comment_installer_cette_bibliotheque)
+7. [Comment l'utiliser ?](#comment_l_utiliser)
+8. [Quelques exemples](#quelques_exemples)
+9. [Liens utiles](#liens_utiles)
+10. [Conclusion](#conclusion)
 
 <a name="introduction"></a>
 ## Introduction
+
+<a name="presentation"></a>
+## Présentation
+
+<a name="structure_de_ce_depot_git"></a>
+## Structure de ce dépôt Git
+
+<a name="comment_ce_projet_a_t_il_ete_developpe"></a>
+## Comment ce projet a-t-il été développé ?
 
 <a name="comment_compiler_cette_bibliotheque"></a>
 ## Comment compiler cette bibliothèque ?

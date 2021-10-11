@@ -10,11 +10,9 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
 4. [Comment ce projet a-t-il été développé ?](#comment_ce_projet_a_t_il_ete_developpe)
 5. [Comment compiler cette bibliothèque ?](#comment_compiler_cette_bibliotheque)
 6. [Comment installer cette bibliothèque ?](#comment_installer_cette_bibliotheque)
-
-  * [Linux](#linux)
-  * [Mac](#mac)
-  * [Windows](#windows)
-
+      * [Linux](#linux)
+      * [Mac](#mac)
+      * [Windows](#windows)
 7. [Comment l'utiliser ?](#comment_l_utiliser)
 8. [Quelques exemples](#quelques_exemples)
 9. [Liens utiles](#liens_utiles)

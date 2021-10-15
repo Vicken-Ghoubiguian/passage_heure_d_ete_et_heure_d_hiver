@@ -116,6 +116,6 @@ int main()
         //
         printf("%s\n", test);
 
-	// Tout va bien (donc EXIT_SUCCESS)
+	//Tout va bien (donc EXIT_SUCCESS)
 	return 0;
 }

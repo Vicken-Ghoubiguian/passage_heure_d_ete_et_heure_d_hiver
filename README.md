@@ -81,7 +81,7 @@ Premier exemple, installation en local de la bibliothèque...
 #include <time.h>
 #include "passage_heure_d_ete_et_heure_d_hiver/passage_heure_d_ete_et_heure_d_hiver.h"
 
-//
+// Fonction principale du programme
 int main()
 {
    	//Renvoie de l'horaire actuelle (date et heure systéme) sous forme de timestamp (time_t) grace à la fonction time, sa valeur de retour est affectée à la variable la
@@ -90,6 +90,7 @@ int main()
    	//Appel à la fonction affichage_de_l_horloge avec comme paramétre le temps courant sous forme d'un timestamp (time_t)
 	affichage_de_l_horloge(la);
    
+   	// Tout va bien
    	return 0;
 }
 ```

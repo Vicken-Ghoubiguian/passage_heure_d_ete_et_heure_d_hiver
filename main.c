@@ -3,6 +3,7 @@
 #include <time.h>
 #include "passage_heure_d_ete_et_heure_d_hiver/passage_heure_d_ete_et_heure_d_hiver.h"
 
+// Fonction principale du programme
 int main()
 {
 	//Renvoie de l'horaire actuelle (date et heure systéme) sous forme de timestamp (time_t) grace à la fonction time, sa valeur de retour est affectée à la variable la
@@ -115,5 +116,6 @@ int main()
         //
         printf("%s\n", test);
 
+	// Tout va bien (donc EXIT_SUCCESS)
 	return 0;
 }

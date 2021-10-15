@@ -90,7 +90,7 @@ int main()
    	//Appel à la fonction affichage_de_l_horloge avec comme paramétre le temps courant sous forme d'un timestamp (time_t)
 	affichage_de_l_horloge(la);
    
-   	// Tout va bien
+   	// Tout va bien (donc EXIT_SUCCESS)
    	return 0;
 }
 ```

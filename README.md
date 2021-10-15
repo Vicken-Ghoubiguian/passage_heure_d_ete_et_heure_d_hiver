@@ -74,6 +74,7 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
 <a name="quelques_exemples"></a>
 ## Quelques exemples
 
+Premier exemple, installation en local de la bibliothèque...
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -82,7 +83,13 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
 
 int main()
 {
-
+   //Renvoie de l'horaire actuelle (date et heure systéme) sous forme de timestamp (time_t) grace à la fonction time, sa valeur de retour est affectée à la variable la
+	time_t la = time(NULL)
+   
+   //Appel à la fonction affichage_de_l_horloge avec comme paramétre le temps courant sous forme d'un timestamp (time_t)
+	affichage_de_l_horloge(la);
+   
+   return 0;
 }
 ```
 

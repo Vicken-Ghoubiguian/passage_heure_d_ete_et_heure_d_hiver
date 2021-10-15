@@ -74,6 +74,18 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
 <a name="quelques_exemples"></a>
 ## Quelques exemples
 
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include "passage_heure_d_ete_et_heure_d_hiver/passage_heure_d_ete_et_heure_d_hiver.h"
+
+int main()
+{
+
+}
+```
+
 <a name="liens_utiles"></a>
 ## Liens utiles
 

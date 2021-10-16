@@ -108,8 +108,8 @@ int main()
 	time_t la = time(NULL);
 
   	//Déclaration puis initialisation des variables heure_d_hiver et heure_d_ete sous forme de timestamp (time_t) grace aux fonctions date_du_dernier_dimanche_de_mars et date_du_dernier_dimanche_d_octobre
-	time_t heure_d_hiver = date_du_dernier_dimanche_de_mars(la, 2);
-	time_t heure_d_ete = date_du_dernier_dimanche_d_octobre(la, 3);
+	time_t heure_d_hiver = date_du_dernier_dimanche_d_octobre(la, 3);
+	time_t heure_d_ete = date_du_dernier_dimanche_de_mars(la, 2);
 
 	//Declaration de la variable temps_utc qui stocke la valeur du temps UTC (Coordinate Universal Time) sous forme de timestamp (time_t)
 	time_t temps_utc;

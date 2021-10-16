@@ -74,7 +74,7 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
 <a name="quelques_exemples"></a>
 ## Quelques exemples
 
-Premier exemple, installation en local de la bibliothèque...
+Premier exemple, affichage de l'horloge complète (date et heure courante pour tous les fuseaux horaires)...
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -94,6 +94,8 @@ int main()
    	return 0;
 }
 ```
+
+
 
 <a name="liens_utiles"></a>
 ## Liens utiles

@@ -4,6 +4,10 @@
 #include <string.h>
 #include "passage_heure_d_ete_et_heure_d_hiver.h"
 
+// Cette fonction calcule puis retourne le temps UTC sous forme d'un timestamp
+
+// Cette fonction calcule puis retourne le temps UTC sous forme d'un struct tm
+
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour les pays européens) à l'aide du timestamp et de l'heure (1 pour la Grande Bretagne et 2 pour la France) passé en paramétre
 time_t date_du_dernier_dimanche_de_mars(time_t aujourdhui, int heure)
 {

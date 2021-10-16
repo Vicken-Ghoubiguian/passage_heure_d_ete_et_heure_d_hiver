@@ -90,6 +90,39 @@ int main()
 	time_t heure_d_hiver = date_du_dernier_dimanche_d_octobre(la, 3);
 	time_t heure_d_ete = date_du_dernier_dimanche_de_mars(la, 2);
 
+	//Declaration de la variable date_utc qui stocke la valeur du temps UTC (Coordinate Universal Time) sous forme de struct tm
+	struct tm *date_utc;
+
+	//Calcul du temps UTC (date et heure) sous forme de struct tm
+	date_utc = temps_utc_en_struct_tm(la, heure_d_hiver, heure_d_ete);
+
+	//Saut de ligne (pour la lisibilité)
+	printf("\n\n");
+
+	//Affichage du temps universel coordonné (UTC)
+	printf("%d:%d:%d - %d %d %d.\n", date_utc->tm_hour, date_utc->tm_min, date_utc->tm_sec, date_utc->tm_mday, date_utc->tm_mon + 1, date_utc->tm_year + 1900);
+
+	//Tout va bien (donc EXIT_SUCCESS)
+   	return 0;
+}
+```
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include "passage_heure_d_ete_et_heure_d_hiver/passage_heure_d_ete_et_heure_d_hiver.h"
+
+// Fonction principale du programme
+int main()
+{
+	//Renvoie de l'horaire actuelle (date et heure systéme) sous forme de timestamp (time_t) grace à la fonction time, sa valeur de retour est affectée à la variable la
+	time_t la = time(NULL);
+
+	//Déclaration puis initialisation des variables heure_d_hiver et heure_d_ete sous forme de timestamp (time_t) grace aux fonctions date_du_dernier_dimanche_de_mars et date_du_dernier_dimanche_d_octobre
+	time_t heure_d_hiver = date_du_dernier_dimanche_d_octobre(la, 3);
+	time_t heure_d_ete = date_du_dernier_dimanche_de_mars(la, 2);
+
 	//Declaration de la variable temps_utc qui stocke la valeur du temps UTC (Coordinate Universal Time) sous forme de timestamp (time_t), et de la variable date_utc (sous forme de struct tm)
 	time_t temps_utc;
 	struct tm *date_utc;

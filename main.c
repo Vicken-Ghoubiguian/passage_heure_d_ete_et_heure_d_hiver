@@ -105,6 +105,9 @@ int main()
     //
     printf("%s\n", test);
 
+	//Saut de ligne (pour la lisibilité)
+	printf("\n\n");
+
 	//Tout va bien (donc EXIT_SUCCESS)
 	return 0;
 }

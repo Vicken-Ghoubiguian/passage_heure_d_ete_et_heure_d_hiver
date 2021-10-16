@@ -17,10 +17,6 @@ int main()
 	time_t temps_utc;
 	struct tm *date_utc;
 
-	printf("%ld\n", la);
-	printf("%ld\n", heure_d_hiver);
-	printf("%ld\n", heure_d_ete);
-
 	//Configuration de la variable temps_utc sous forme de timestamp (time_t) correspondant au temps universel coordonné (UTC)
 	if(la < heure_d_hiver && la >= heure_d_ete)
 	{

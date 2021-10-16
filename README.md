@@ -145,6 +145,33 @@ int main()
 }
 ```
 
+exemple,
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include "passage_heure_d_ete_et_heure_d_hiver/passage_heure_d_ete_et_heure_d_hiver.h"
+
+// Fonction principale du programme
+int main()
+{
+	//Renvoie de l'horaire actuelle (date et heure systéme) sous forme de timestamp (time_t) grace à la fonction time, sa valeur de retour est affectée à la variable la
+	time_t la = time(NULL);
+
+	// Calcul et retour du temps (la date et l'heure) courant à Séoul sous forme d'une chaine de caractères 
+    char* date_et_heure_a_seoul = retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(la, "Seoul");
+
+    // Affichage du temps (la date et l'heure) courant à Seoul
+    printf("%s\n", date_et_heure_a_seoul);
+
+	//Saut de ligne (pour la lisibilité)
+	printf("\n\n");
+
+	//Tout va bien (donc EXIT_SUCCESS)
+	return 0;
+}
+```
+
  exemple, calcul et affichage de l'horloge complète (date et heure courante pour tous les fuseaux horaires)...
 ```c
 #include <stdio.h>
@@ -165,6 +192,7 @@ int main()
    	return 0;
 }
 ```
+
  exemple, calcul et affichage de la date du passage de l'heure d'hiver à l'heure d'été pour tous les fuseaux horaires le pratiquant...
 ```c
 #include <stdio.h>

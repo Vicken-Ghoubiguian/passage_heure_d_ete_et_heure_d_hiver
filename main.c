@@ -17,8 +17,11 @@ int main()
 	time_t temps_utc;
 	struct tm *date_utc;
 
+	//
+	temps_utc = temps_utc_en_timestamp(la, heure_d_hiver, heure_d_ete);
+
 	//Configuration de la variable temps_utc sous forme de timestamp (time_t) correspondant au temps universel coordonné (UTC)
-	if(la < heure_d_hiver && la >= heure_d_ete)
+	/*if(la < heure_d_hiver && la >= heure_d_ete)
 	{
 		//Le temps universel coordonné est en retard de 2 heures par rapport à l'heure de Paris, celui-ci est affecté à la variable temps_utc
 		temps_utc = la - (2 * 3600);
@@ -28,7 +31,7 @@ int main()
 	{
 		//Le temps universel coordonné est en retard d'1 heure par rapport à l'heure de Paris, celui-ci est affecté à la variable temps_utc
 		temps_utc = la - 3600;
-	}
+	}*/
 
 	//Conversion de la valeur contenue dans la variable temps_utc sous forme de timestamp (time_t) en struct tm grace à la fonction localtime, et affectation du resultat dans la variable date_utc
 	date_utc = localtime(&temps_utc);

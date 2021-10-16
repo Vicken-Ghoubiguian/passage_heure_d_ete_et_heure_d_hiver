@@ -145,7 +145,7 @@ int main()
 }
 ```
 
-Premier exemple, calcul et affichage de l'horloge complète (date et heure courante pour tous les fuseaux horaires)...
+ exemple, calcul et affichage de l'horloge complète (date et heure courante pour tous les fuseaux horaires)...
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -165,7 +165,7 @@ int main()
    	return 0;
 }
 ```
-Second exemple, calcul et affichage de la date du passage de l'heure d'hiver à l'heure d'été pour tous les fuseaux horaires le pratiquant...
+ exemple, calcul et affichage de la date du passage de l'heure d'hiver à l'heure d'été pour tous les fuseaux horaires le pratiquant...
 ```c
 #include <stdio.h>
 #include <stdlib.h>

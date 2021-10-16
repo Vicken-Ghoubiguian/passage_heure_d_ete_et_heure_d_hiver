@@ -74,6 +74,7 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
 <a name="quelques_exemples"></a>
 ## Quelques exemples
 
+Premier exemple, calcul et affichage du temps UTC (date et heure courante pour tous les fuseaux horaires) grâce à la fonction 'temps_utc_en_struct_tm'...
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -106,7 +107,7 @@ int main()
    	return 0;
 }
 ```
-
+Second exemple, calcul et affichage du temps UTC (date et heure courante pour tous les fuseaux horaires) grâce à la fonction 'temps_utc_en_timestamp'...
 ```c
 #include <stdio.h>
 #include <stdlib.h>

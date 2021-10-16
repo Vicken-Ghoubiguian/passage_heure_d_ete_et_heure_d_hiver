@@ -3,8 +3,8 @@
 
 #include <time.h>
 
-// Cette fonction calcule puis retourne le temps UTC sous forme d'un timestamp à l'aide du timestamp de l'heure courante (celle en France), et de ceux des horaire (date et heure) du changement de l'heure d'été à l'heure d'hiver et réciproquement passé en paramétre
-//time_t temps_utc_en_timestamp(time_t aujourdhui, time_t heure_d_hiver, time_t heure_d_ete)
+// Cette fonction calcule puis retourne le temps UTC sous forme d'un timestamp à l'aide du timestamp de l'heure courante (celle en France), et de ceux des horaire (date et heure) du changement de l'heure d'été à l'heure d'hiver et réciproquement en France passé en paramétre
+time_t temps_utc_en_timestamp(time_t aujourdhui, time_t heure_d_hiver_pour_france, time_t heure_d_ete_pour_france);
 
 // Cette fonction calcule puis retourne le temps UTC sous forme d'un struct tm à l'aide du timestamp de l'heure courante (celle en France), et de ceux des horaire (date et heure) du changement de l'heure d'été à l'heure d'hiver et réciproquement passé en paramétre
 

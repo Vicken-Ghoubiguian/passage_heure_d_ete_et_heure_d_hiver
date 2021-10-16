@@ -5,6 +5,27 @@
 #include "passage_heure_d_ete_et_heure_d_hiver.h"
 
 // Cette fonction calcule puis retourne le temps UTC sous forme d'un timestamp à l'aide du timestamp de l'heure courante (celle en France), et de ceux des horaire (date et heure) du changement de l'heure d'été à l'heure d'hiver et réciproquement passé en paramétre
+time_t temps_utc_en_timestamp(time_t aujourdhui, time_t heure_d_hiver_pour_france, time_t heure_d_ete_pour_france)
+{
+	//Declaration de la variable temps_utc qui stocke la valeur du temps UTC (Coordinate Universal Time) sous forme de timestamp (time_t)
+	time_t temps_utc;
+
+	//Configuration de la variable temps_utc sous forme de timestamp (time_t) correspondant au temps universel coordonné (UTC)
+	if(aujourdhui < heure_d_hiver_pour_france && aujourdhui >= heure_d_ete_pour_france)
+	{
+		//Le temps universel coordonné est en retard de 2 heures par rapport à l'heure de Paris, celui-ci est affecté à la variable temps_utc
+		temps_utc = aujourdhui - (2 * 3600);
+	}
+	//Sinon...
+	else
+	{
+		//Le temps universel coordonné est en retard d'1 heure par rapport à l'heure de Paris, celui-ci est affecté à la variable temps_utc
+		temps_utc = aujourdhui - 3600;
+	}
+
+	//On retourne alors le resultat obtenu sous forme d'un timestamp (time_t)
+	return temps_utc;
+}
 
 // Cette fonction calcule puis retourne le temps UTC sous forme d'un struct tm à l'aide du timestamp de l'heure courante (celle en France), et de ceux des horaire (date et heure) du changement de l'heure d'été à l'heure d'hiver et réciproquement passé en paramétre
 

@@ -28,6 +28,33 @@ time_t temps_utc_en_timestamp(time_t aujourdhui, time_t heure_d_hiver_pour_franc
 }
 
 // Cette fonction calcule puis retourne le temps UTC sous forme d'un struct tm à l'aide du timestamp de l'heure courante (celle en France), et de ceux des horaire (date et heure) du changement de l'heure d'été à l'heure d'hiver et réciproquement passé en paramétre
+struct tm * temps_utc_en_struct_tm(time_t aujourdhui, time_t heure_d_hiver_pour_france, time_t heure_d_ete_pour_france)
+{
+	//Declaration de la variable temps_utc qui stocke la valeur du temps UTC (Coordinate Universal Time) sous forme de timestamp (time_t)
+	time_t temps_utc;
+
+	//Declaration de la variable date_utc (sous forme de struct tm)
+	struct tm *date_utc;
+
+	//Configuration de la variable temps_utc sous forme de timestamp (time_t) correspondant au temps universel coordonné (UTC)
+	if(aujourdhui < heure_d_hiver_pour_france && aujourdhui >= heure_d_ete_pour_france)
+	{
+		//Le temps universel coordonné est en retard de 2 heures par rapport à l'heure de Paris, celui-ci est affecté à la variable temps_utc
+		temps_utc = aujourdhui - (2 * 3600);
+	}
+	//Sinon...
+	else
+	{
+		//Le temps universel coordonné est en retard d'1 heure par rapport à l'heure de Paris, celui-ci est affecté à la variable temps_utc
+		temps_utc = aujourdhui - 3600;
+	}
+
+	//Conversion de la valeur contenue dans la variable temps_utc sous forme de timestamp (time_t) en struct tm grace à la fonction localtime, et affectation du resultat dans la variable date_utc
+	date_utc = localtime(&temps_utc);
+
+	//On retourne alors le resultat obtenu sous forme d'un struct (time_t)
+	return date_utc;
+}
 
 //Cette fonction calcule puis retourne l'horaire (date et heure) du changement d'heure d'été (pour les pays européens) à l'aide du timestamp et de l'heure (1 pour la Grande Bretagne et 2 pour la France) passé en paramétre
 time_t date_du_dernier_dimanche_de_mars(time_t aujourdhui, int heure)

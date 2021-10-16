@@ -74,7 +74,7 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
 <a name="quelques_exemples"></a>
 ## Quelques exemples
 
-Premier exemple, affichage de l'horloge complète (date et heure courante pour tous les fuseaux horaires)...
+Premier exemple, calcul et affichage de l'horloge complète (date et heure courante pour tous les fuseaux horaires)...
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -94,7 +94,7 @@ int main()
    	return 0;
 }
 ```
-
+Second exemple, calcul et affichage de la date du passage de l'heure d'hiver à l'heure d'été pour tous les fuseaux horaires le pratiquant...
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -111,9 +111,8 @@ int main()
 	time_t heure_d_hiver = date_du_dernier_dimanche_de_mars(la, 2);
 	time_t heure_d_ete = date_du_dernier_dimanche_d_octobre(la, 3);
 
-	//Declaration de la variable temps_utc qui stocke la valeur du temps UTC (Coordinate Universal Time) sous forme de timestamp (time_t), et de la variable date_utc (sous forme de struct tm)
+	//Declaration de la variable temps_utc qui stocke la valeur du temps UTC (Coordinate Universal Time) sous forme de timestamp (time_t)
 	time_t temps_utc;
-	struct tm *date_utc;
 
 	//Configuration de la variable temps_utc sous forme de timestamp (time_t) correspondant au temps universel coordonné (UTC)
 	if(la < heure_d_hiver && la >= heure_d_ete)

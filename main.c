@@ -17,7 +17,7 @@ int main()
 	time_t temps_utc;
 	struct tm *date_utc;
 
-	//
+	//Calcul du temps UTC (date et heure) sous forme de timestamp
 	temps_utc = temps_utc_en_timestamp(la, heure_d_hiver, heure_d_ete);
 
 	//Conversion de la valeur contenue dans la variable temps_utc sous forme de timestamp (time_t) en struct tm grace à la fonction localtime, et affectation du resultat dans la variable date_utc

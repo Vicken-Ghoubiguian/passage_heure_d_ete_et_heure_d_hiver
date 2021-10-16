@@ -27,8 +27,7 @@ int main()
 	printf("\n\n");
 
 	//Affichage du temps universel coordonné (UTC)
-	printf("%d:%d:%d - %d %d %d.\n",
-                date_utc->tm_hour, date_utc->tm_min, date_utc->tm_sec, date_utc->tm_mday, date_utc->tm_mon + 1, date_utc->tm_year + 1900);
+	printf("%d:%d:%d - %d %d %d.\n", date_utc->tm_hour, date_utc->tm_min, date_utc->tm_sec, date_utc->tm_mday, date_utc->tm_mon + 1, date_utc->tm_year + 1900);
 
 	//Saut de ligne (pour la lisibilité)
 	printf("\n\n");
@@ -40,39 +39,39 @@ int main()
 
 	date_time_t = date_du_dernier_dimanche_d_octobre(temps_utc, 3);
 	date_tm = localtime(&date_time_t);
-        printf("Date du dernier dimanche d'octobre (heure d'été -> heure d'hiver pour l'Europe): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
+    printf("Date du dernier dimanche d'octobre (heure d'été -> heure d'hiver pour l'Europe): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
 
 	date_time_t = date_du_deuxieme_dimanche_de_mars(temps_utc);
 	date_tm = localtime(&date_time_t);
-        printf("Date du deuxieme dimanche de mars (heure d'hiver -> heure d'été pour l'Amérique du Nord): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
+    printf("Date du deuxieme dimanche de mars (heure d'hiver -> heure d'été pour l'Amérique du Nord): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
 
 	date_time_t = date_du_premier_dimanche_de_novembre(temps_utc);
 	date_tm = localtime(&date_time_t);
-        printf("Date du premier dimanche de novembre (heure d'été -> heure d'hiver pour l'Amerique du Nord): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
+    printf("Date du premier dimanche de novembre (heure d'été -> heure d'hiver pour l'Amerique du Nord): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
 
 	date_time_t = date_du_premier_dimanche_d_avril(temps_utc, 2);
 	date_tm = localtime(&date_time_t);
-        printf("Date du premier dimanche d'Avril (heure d'été -> heure d'hiver pour l'Australie): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
+    printf("Date du premier dimanche d'Avril (heure d'été -> heure d'hiver pour l'Australie): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
 
 	date_time_t = date_du_premier_dimanche_d_octobre(temps_utc);
 	date_tm = localtime(&date_time_t);
-        printf("Date du premier dimanche d'Octobre (heure d'hiver -> heure d'été pour l'Australie): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
+    printf("Date du premier dimanche d'Octobre (heure d'hiver -> heure d'été pour l'Australie): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
 
 	date_time_t = date_du_premier_dimanche_d_avril(temps_utc, 3);
-        date_tm = localtime(&date_time_t);
-        printf("Date du premier dimanche d'Avril (heure d'été -> heure d'hiver pour la Nouvelle-Zélande): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
+    date_tm = localtime(&date_time_t);
+    printf("Date du premier dimanche d'Avril (heure d'été -> heure d'hiver pour la Nouvelle-Zélande): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
 
-        date_time_t = date_du_dernier_dimanche_de_septembre(temps_utc);
-        date_tm = localtime(&date_time_t);
-        printf("Date du dernier dimanche de Septembre (heure d'hiver -> heure d'été pour la Nouvelle-Zélande): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
+    date_time_t = date_du_dernier_dimanche_de_septembre(temps_utc);
+    date_tm = localtime(&date_time_t);
+    printf("Date du dernier dimanche de Septembre (heure d'hiver -> heure d'été pour la Nouvelle-Zélande): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
 
 	date_time_t = date_du_deuxieme_dimanche_de_mai(temps_utc);
 	date_tm = localtime(&date_time_t);
-        printf("Date du deuxieme dimanche de Mai (heure d'été -> heure d'hiver pour le Chili): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
+    printf("Date du deuxieme dimanche de Mai (heure d'été -> heure d'hiver pour le Chili): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
 
 	date_time_t = date_du_deuxieme_dimanche_d_aout(temps_utc);
 	date_tm = localtime(&date_time_t);
-        printf("Date du deuxieme dimanche d'Aout (heure d'hiver -> heure d'été pour le Chili): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
+    printf("Date du deuxieme dimanche d'Aout (heure d'hiver -> heure d'été pour le Chili): %d / %d / %d.\n", date_tm->tm_mday, (date_tm->tm_mon + 1), date_tm->tm_year + 1900);
 
 	//Saut de ligne (pour la lisibilité)
 	printf("\n\n");
@@ -101,10 +100,10 @@ int main()
 	affichage_de_l_horloge(la);
 
 	//
-        char* test = retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time(NULL), "Seoul");
+    char* test = retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(time(NULL), "Seoul");
 
-        //
-        printf("%s\n", test);
+    //
+    printf("%s\n", test);
 
 	//Tout va bien (donc EXIT_SUCCESS)
 	return 0;

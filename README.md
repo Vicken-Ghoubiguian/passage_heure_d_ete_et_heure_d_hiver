@@ -95,6 +95,8 @@ Va venir...
 <a name="comment_l_utiliser"></a>
 ## Comment l'utiliser ?
 
+Alors,
+
 <a name="quelques_exemples"></a>
 ## Quelques exemples
 

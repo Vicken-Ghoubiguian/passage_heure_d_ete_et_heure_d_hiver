@@ -35,6 +35,12 @@ Va venir...
 
 Ce dépôt Git est constitué des éléments suivants:
 
+* __passage_heure_d_ete_et_heure_d_hiver__:
+* __.gitignore__:
+* __LICENSE__:
+* __README.md__:
+* __main.c__:
+
 <a name="comment_ce_projet_a_t_il_ete_developpe"></a>
 ## Comment ce projet a-t-il été développé ?
 

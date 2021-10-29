@@ -35,7 +35,7 @@ Va venir...
 
 Ce dépôt Git est constitué des éléments suivants:
 
-* __passage_heure_d_ete_et_heure_d_hiver__:
+* __passage_heure_d_ete_et_heure_d_hiver__: répertoire contenant la bibliothéque C au coeur de ce projet GitHub
 * __.gitignore__:
 * __LICENSE__: fichier décrivant la licence de logiciels de cette bibliothèque C
 * __README.md__: fichier de presentation et de documentation de cette bibliothéque C ainsi que de tout l'entiéreté de ce projet

@@ -8,7 +8,7 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
 2. [Présentation](#presentation)
 3. [Structure de ce dépôt Git](#structure_de_ce_depot_git)
 4. [Comment ce projet a-t-il été développé ?](#comment_ce_projet_a_t_il_ete_developpe)
-5. [Comment compiler cette bibliothèque ?](#comment_compiler_cette_bibliotheque)
+5. [Comment compiler ce projet après l'avoir cloné depuis GitHub ?](#comment_compiler_ce_projet_apres_l_avoir_clone_depuis_GitHub)
 6. [Comment installer cette bibliothèque ?](#comment_installer_cette_bibliotheque)
     * [Linux](#linux)
     * [Mac](#mac)
@@ -38,8 +38,8 @@ Va venir...
 
 Va venir...
 
-<a name="comment_compiler_cette_bibliotheque"></a>
-## Comment compiler cette bibliothèque ?
+<a name="comment_compiler_ce_projet_apres_l_avoir_clone_depuis_GitHub"></a>
+## Comment compiler ce projet après l'avoir cloné depuis GitHub ?
 
 1. Tout d'abord, clonez le dépôt Git __passage_heure_d_ete_et_heure_d_hiver__ sur votre ordinateur:
   ```bash

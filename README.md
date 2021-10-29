@@ -84,6 +84,9 @@ Va venir...
 <a name="quelques_exemples"></a>
 ## Quelques exemples
 
+<a name="non_integree"></a>
+## Non-intégrée à la bibliothèque standard
+
 Premier exemple, calcul et affichage du temps UTC (date et heure courante pour tous les fuseaux horaires) grâce à la fonction 'temps_utc_en_struct_tm'...
 ```c
 #include <stdio.h>

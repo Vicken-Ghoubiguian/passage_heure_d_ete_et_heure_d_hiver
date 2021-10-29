@@ -37,9 +37,11 @@ Ce dépôt Git est constitué des éléments suivants:
 
 * __passage_heure_d_ete_et_heure_d_hiver__:
 * __.gitignore__:
-* __LICENSE__:
+* __LICENSE__: fichier décrivant la licence de logiciels de cette bibliothèque C
 * __README.md__: fichier de presentation et de documentation de cette bibliothéque C ainsi que de tout l'entiéreté de ce projet
 * __main.c__: fichier de test de cette bibliothéque
+
+
 
 <a name="comment_ce_projet_a_t_il_ete_developpe"></a>
 ## Comment ce projet a-t-il été développé ?

@@ -84,7 +84,8 @@ Va venir...
 <a name="quelques_exemples"></a>
 ## Quelques exemples
 
-### 
+<a name="integree"></a>
+### Intégrée à la bibliothèque standard
 
 <a name="non_integree"></a>
 ### Non-intégrée à la bibliothèque standard

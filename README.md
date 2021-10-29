@@ -35,7 +35,7 @@ Va venir...
 
 Ce dépôt Git est constitué des éléments suivants:
 
-* __passage_heure_d_ete_et_heure_d_hiver__
+* __passage_heure_d_ete_et_heure_d_hiver__:
 * __.gitignore__:
 * __LICENSE__:
 * __README.md__: 

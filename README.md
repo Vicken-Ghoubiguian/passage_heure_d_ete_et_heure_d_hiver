@@ -21,14 +21,22 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
 <a name="introduction"></a>
 ## Introduction
 
+Va venir...
+
 <a name="presentation"></a>
 ## Présentation
+
+Va venir...
 
 <a name="structure_de_ce_depot_git"></a>
 ## Structure de ce dépôt Git
 
+Va venir...
+
 <a name="comment_ce_projet_a_t_il_ete_developpe"></a>
 ## Comment ce projet a-t-il été développé ?
+
+Va venir...
 
 <a name="comment_compiler_cette_bibliotheque"></a>
 ## Comment compiler cette bibliothèque ?

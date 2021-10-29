@@ -41,7 +41,10 @@ Ce dépôt Git est constitué des éléments suivants:
 * __README.md__: fichier de presentation et de documentation de cette bibliothéque C ainsi que de tout l'entiéreté de ce projet
 * __main.c__: fichier de test de cette bibliothéque
 
-Le dossier __passage_heure_d_ete_et_heure_d_hiver__ correspond au coeur de ce projet.
+Le dossier __passage_heure_d_ete_et_heure_d_hiver__ correspond au coeur de ce projet. Il contient les fichiers suivants:
+
+* __passage_heure_d_ete_et_heure_d_hiver.h__:
+* __passage_heure_d_ete_et_heure_d_hiver.c__:
 
 <a name="comment_ce_projet_a_t_il_ete_developpe"></a>
 ## Comment ce projet a-t-il été développé ?

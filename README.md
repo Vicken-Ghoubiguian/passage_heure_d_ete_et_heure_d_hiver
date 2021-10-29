@@ -72,11 +72,17 @@ Va venir...
 <a name="linux"></a>
 ### Linux
 
+Va venir...
+
 <a name="mac"></a>
 ### Mac
 
+Va venir...
+
 <a name="windows"></a>
 ### Windows
+
+Va venir...
 
 <a name="comment_l_utiliser"></a>
 ## Comment l'utiliser ?
@@ -161,7 +167,7 @@ int main()
 }
 ```
 
-exemple,
+exemple, affichage de la date et de l'heure à Seoul (Corée du sud)
 ```c
 #include <stdio.h>
 #include <stdlib.h>

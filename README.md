@@ -33,12 +33,12 @@ Va venir...
 <a name="structure_de_ce_depot_git"></a>
 ## Structure de ce dépôt Git
 
-Va venir...
+Ce dépôt Git est constitué des éléments suivants:
 
 <a name="comment_ce_projet_a_t_il_ete_developpe"></a>
 ## Comment ce projet a-t-il été développé ?
 
-Ce dépôt Git est constitué des éléments suivants:
+Va venir...
 
 <a name="comment_compiler_ce_projet_apres_l_avoir_clone_depuis_GitHub"></a>
 ## Comment compiler ce projet après l'avoir cloné depuis GitHub ?

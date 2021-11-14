@@ -196,10 +196,10 @@ int main()
 	time_t la = time(NULL);
 
 	// Calcul et retour du temps (la date et l'heure) courant à Séoul sous forme d'une chaine de caractères 
-    char* date_et_heure_a_seoul = retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(la, "Seoul");
+    	char* date_et_heure_a_seoul = retour_de_l_heure_et_de_la_date_pour_une_ville_determinee_et_connue(la, "Seoul");
 
-    // Affichage du temps (la date et l'heure) courant à Seoul
-    printf("%s\n", date_et_heure_a_seoul);
+    	// Affichage du temps (la date et l'heure) courant à Seoul
+    	printf("%s\n", date_et_heure_a_seoul);
 
 	//Saut de ligne (pour la lisibilité)
 	printf("\n\n");

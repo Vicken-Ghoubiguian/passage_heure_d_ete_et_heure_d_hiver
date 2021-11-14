@@ -108,6 +108,16 @@ Alors,
 <a name="integree"></a>
 ### Intégrée à la bibliothèque standard
 
+Calcul et affichage du temps UTC (date et heure courante pour tous les fuseaux horaires) grâce à la fonction 'temps_utc_en_struct_tm'...
+
+Calcul et affichage du temps UTC (date et heure courante pour tous les fuseaux horaires) grâce à la fonction 'temps_utc_en_timestamp'...
+
+Affichage de la date et de l'heure à Seoul (Corée du sud)
+
+Calcul et affichage de l'horloge complète (date et heure courante pour tous les fuseaux horaires)...
+
+Calcul et affichage de la date du passage de l'heure d'hiver à l'heure d'été pour tous les fuseaux horaires le pratiquant...
+
 <a name="non_integree"></a>
 ### Non-intégrée à la bibliothèque standard
 

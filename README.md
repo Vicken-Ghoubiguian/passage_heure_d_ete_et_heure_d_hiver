@@ -36,14 +36,14 @@ Va venir...
 Ce dépôt Git est constitué des éléments suivants:
 
 * __passage_heure_d_ete_et_heure_d_hiver__: répertoire contenant la bibliothéque C au coeur de ce projet GitHub
-* __.gitignore__:
+* __.gitignore__: fichier généré lors de la génération et la configuration du dêpot GitHub pour ignorer certains fichiers générés par un projet développé en C
 * __LICENSE__: fichier décrivant la licence de logiciels de cette bibliothèque C
 * __README.md__: fichier de presentation et de documentation de cette bibliothéque C ainsi que de tout l'entiéreté de ce projet
 * __main.c__: fichier de test de cette bibliothéque
 
 Le dossier __passage_heure_d_ete_et_heure_d_hiver__ correspond au coeur de ce projet. Il contient les fichiers suivants:
 
-* __passage_heure_d_ete_et_heure_d_hiver.h__:
+* __passage_heure_d_ete_et_heure_d_hiver.h__: 
 * __passage_heure_d_ete_et_heure_d_hiver.c__:
 
 En voilà pour la structure du projet.
@@ -100,7 +100,7 @@ Va venir...
 <a name="comment_l_utiliser"></a>
 ## Comment l'utiliser ?
 
-Alors,
+Va venir...
 
 <a name="quelques_exemples"></a>
 ## Quelques exemples

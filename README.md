@@ -111,7 +111,7 @@ Alors,
 <a name="non_integree"></a>
 ### Non-intégrée à la bibliothèque standard
 
-Premier exemple, calcul et affichage du temps UTC (date et heure courante pour tous les fuseaux horaires) grâce à la fonction 'temps_utc_en_struct_tm'...
+Calcul et affichage du temps UTC (date et heure courante pour tous les fuseaux horaires) grâce à la fonction 'temps_utc_en_struct_tm'...
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -144,7 +144,7 @@ int main()
    	return 0;
 }
 ```
-Second exemple, calcul et affichage du temps UTC (date et heure courante pour tous les fuseaux horaires) grâce à la fonction 'temps_utc_en_timestamp'...
+Calcul et affichage du temps UTC (date et heure courante pour tous les fuseaux horaires) grâce à la fonction 'temps_utc_en_timestamp'...
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -182,7 +182,7 @@ int main()
 }
 ```
 
-exemple, affichage de la date et de l'heure à Seoul (Corée du sud)
+Affichage de la date et de l'heure à Seoul (Corée du sud)
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -209,7 +209,7 @@ int main()
 }
 ```
 
- exemple, calcul et affichage de l'horloge complète (date et heure courante pour tous les fuseaux horaires)...
+Calcul et affichage de l'horloge complète (date et heure courante pour tous les fuseaux horaires)...
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -230,7 +230,7 @@ int main()
 }
 ```
 
- exemple, calcul et affichage de la date du passage de l'heure d'hiver à l'heure d'été pour tous les fuseaux horaires le pratiquant...
+Calcul et affichage de la date du passage de l'heure d'hiver à l'heure d'été pour tous les fuseaux horaires le pratiquant...
 ```c
 #include <stdio.h>
 #include <stdlib.h>

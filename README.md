@@ -23,10 +23,10 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
 <a name="introduction"></a>
 ## Introduction
 
-Je me suis intéressé au calcul de la date actuelle pour les heures d'été et les heures d'hiver pour la France et d'autres fuseaux horaires dans le monde, ainsi que le décalage de ces mêmes fuseaux horaires dans le cadre d'un projet maker. Le calcul de l'UTC a été ajouté également mais plus tard.
+Je me suis intéressé au calcul de la date actuelle pour les heures d'été et les heures d'hiver pour la France et d'autres fuseaux horaires dans le monde, ainsi que le décalage de ces mêmes fuseaux horaires dans le cadre d'un projet maker. Le calcul de l'UTC (Temps universel coordonné) a été ajouté également mais plus tard.
 Cette bibliothèque écrite en C contient donc les fonctionnalités suivantes:
 
-*
+* calcul de l'UTC (Temps universel coordonné) à l'aide de la date et de l'heure courantes de la timezone __Europe/Paris__,
 *
 *
 *

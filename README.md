@@ -23,7 +23,13 @@ Bibliothèque de fonctions de calcul des dates de passage à l'heure d'été et 
 <a name="introduction"></a>
 ## Introduction
 
-Va venir...
+Cette bibliothèque écrite en C contient donc les fonctionnalités suivantes:
+
+*
+*
+*
+*
+*
 
 <a name="presentation"></a>
 ## Présentation
